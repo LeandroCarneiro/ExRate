@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeandroExRate.Common\LeandroExRate.Common.csproj" />
+    <ProjectReference Include="..\LeandroExRate.Domain\LeandroExRate.Domain.csproj" />
+    <ProjectReference Include="..\LeandroExRate.Mapping\LeandroExRate.Mapping.csproj" />
+    <ProjectReference Include="..\LeandroExRate.ViewModels\LeandroExRate.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

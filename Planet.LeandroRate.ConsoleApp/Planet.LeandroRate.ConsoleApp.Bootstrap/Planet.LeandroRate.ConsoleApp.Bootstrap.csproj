@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Planet.LeandroRate.ConsoleApp.Application\Planet.LeandroRate.ConsoleApp.Application.csproj" />
+    <ProjectReference Include="..\Planet.LeandroRate.ConsoleApp.Business\Planet.LeandroRate.ConsoleApp.Business.csproj" />
+    <ProjectReference Include="..\Planet.LeandroRate.ConsoleApp.Data\Planet.LeandroRate.ConsoleApp.Data.csproj" />
+  </ItemGroup>
+
+</Project>

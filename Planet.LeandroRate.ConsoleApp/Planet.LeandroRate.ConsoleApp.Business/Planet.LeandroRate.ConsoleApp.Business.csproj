@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Planet.LeandroRate.ConsoleApp.Application\Planet.LeandroRate.ConsoleApp.Application.csproj" />
+    <ProjectReference Include="..\Planet.LeandroRate.ConsoleApp.Common\Planet.LeandroRate.ConsoleApp.Common.csproj" />
+    <ProjectReference Include="..\Planet.LeandroRate.ConsoleApp.DI\Planet.LeandroRate.ConsoleApp.DI.csproj" />
+  </ItemGroup>
+
+</Project>
