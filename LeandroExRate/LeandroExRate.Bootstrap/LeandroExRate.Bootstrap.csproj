@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LeandroExRate.Application\LeandroExRate.AppService.csproj" />
-    <ProjectReference Include="..\LeandroExRate.Business\LeandroExRate.Business.csproj" />
+    <ProjectReference Include="..\LeandroExRate.DI\LeandroExRate.DI.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,8 +8,7 @@ namespace LeandroExRate.Bootstrap
     {
         public static void RegisterTypes(IServiceCollection service)
         {
-            service.RegisterAppServices()
-                .RegisterAppBusiness();
+            service.RegisterAppServices();
 
             AppContainer.SetContainer(service);
             AutoMapperConfiguration.Register();

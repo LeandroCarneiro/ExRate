@@ -3,7 +3,7 @@ using LeandroExRate.Domain.Entities;
 
 namespace LeandroExRate.Business.Domain
 {
-    public class UserBusiness : AppBusiness<UserApp>, IUserBusiness
+    public class RateBusiness : AppBusiness<Rate>, IRateBusiness
     {
     }
 }

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LeandroExRate.Common\LeandroExRate.Common.csproj" />
+    <ProjectReference Include="..\LeandroExRate.DI\LeandroExRate.DI.csproj" />
     <ProjectReference Include="..\LeandroExRate.Domain\LeandroExRate.Domain.csproj" />
     <ProjectReference Include="..\LeandroExRate.Mapping\LeandroExRate.Mapping.csproj" />
     <ProjectReference Include="..\LeandroExRate.ViewModels\LeandroExRate.ViewModels.csproj" />
