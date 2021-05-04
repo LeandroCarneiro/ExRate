@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LeandroExRate\LeandroExRate.Bootstrap\LeandroExRate.Bootstrap.csproj" />
+    <ProjectReference Include="..\LeandroExRate.Bootstrap\LeandroExRate.Bootstrap.csproj" />
   </ItemGroup>
 
 </Project>

@@ -17,15 +17,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.DI", "Leandro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.ViewModels", "LeandroExRate\LeandroExRate.ViewModels\LeandroExRate.ViewModels.csproj", "{9D4BD802-4042-4525-95DF-81C019230F82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.App", "LeandroExRate.App\LeandroExRate.App.csproj", "{A6BA90F3-7365-48EF-B3F0-FA81FF978355}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.App", "LeandroExRate\LeandroExRate.App\LeandroExRate.App.csproj", "{A6BA90F3-7365-48EF-B3F0-FA81FF978355}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F4FD497F-DB86-4109-810B-D55E9503CD06}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{6B6F2244-D4AA-46D1-9DC4-1B7B46842650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.Integration.DataFixer", "LeandroExRate.Integration.DataFixer\LeandroExRate.Integration.DataFixer.csproj", "{18095E32-0EEC-40A7-AF08-BCD6B9379E5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.Integration.DataFixer", "LeandroExRate\LeandroExRate.Integration.DataFixer\LeandroExRate.Integration.DataFixer.csproj", "{18095E32-0EEC-40A7-AF08-BCD6B9379E5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.Test", "LeandroExRate.Test\LeandroExRate.Test.csproj", "{73883E70-9AA4-487D-AA8D-F7357B9E5416}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.Test", "LeandroExRate\LeandroExRate.Test\LeandroExRate.Test.csproj", "{73883E70-9AA4-487D-AA8D-F7357B9E5416}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

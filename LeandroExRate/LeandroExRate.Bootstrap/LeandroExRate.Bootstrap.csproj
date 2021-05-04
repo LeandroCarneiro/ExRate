@@ -9,9 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\LeandroExRate.Integration.DataFixer\LeandroExRate.Integration.DataFixer.csproj" />
     <ProjectReference Include="..\LeandroExRate.Application\LeandroExRate.AppService.csproj" />
     <ProjectReference Include="..\LeandroExRate.DI\LeandroExRate.DI.csproj" />
+    <ProjectReference Include="..\LeandroExRate.Integration.DataFixer\LeandroExRate.Integration.DataFixer.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,17 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LeandroExRate.Application\LeandroExRate.AppService.csproj" />
     <ProjectReference Include="..\LeandroExRate.Common\LeandroExRate.Common.csproj" />
-    <ProjectReference Include="..\LeandroExRate.DI\LeandroExRate.DI.csproj" />
   </ItemGroup>
 
 </Project>
