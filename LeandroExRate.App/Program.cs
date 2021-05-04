@@ -24,7 +24,7 @@ namespace LeandroExRate.App
                         foreach (var item in result)                        
                             Console.WriteLine(item.ResultString);
                         
-                        Console.WriteLine("/n/n Type '#' to exit");
+                        Console.WriteLine("Type '#' to exit");
                         option = Console.ReadLine();
                         Console.Clear();
 

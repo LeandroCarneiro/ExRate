@@ -5,6 +5,7 @@ using LeandroExRate.Common.InternalObjects;
 using LeandroExRate.DI;
 using LeandroExRate.ViewModels.AppObjects;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace LeandroExRate.Application.AppServices
@@ -15,6 +16,20 @@ namespace LeandroExRate.Application.AppServices
         public RateAppService()
         {
             _service = AppContainer.Resolve<IRateService>();
+        }
+
+        public async Task<AppResult<List<Rate_vw>>> All()
+        {
+            return await _service.GetAllRateAsync();
+        }
+
+        public async Task<AppResult<List<Rate_vw>>> Sumary()
+        {
+            return new AppResult<List<Rate_vw>>(
+                (await _service.GetAllRateAsync()).Result
+                .Where(x => x.From == ECurrency.EUR
+                        || (x.From == ECurrency.GBP && x.To == ECurrency.USD)
+                      ).ToList());
         }
 
         public async Task<AppResult<Rate_vw>> SelectOptionAsync(EOption option)
@@ -36,11 +51,6 @@ namespace LeandroExRate.Application.AppServices
                 default:
                     throw new InvalidOptionException();
             }
-        }
-
-        public async Task<AppResult<List<Rate_vw>>> Sumary()
-        {
-            return await _service.GetAllRateAsync();
         }
     }
 }
