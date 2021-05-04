@@ -1,5 +1,4 @@
 ﻿using LeandroExRate.DI;
-using LeandroExRate.Mapping;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace LeandroExRate.Bootstrap
@@ -9,10 +8,9 @@ namespace LeandroExRate.Bootstrap
         public static void RegisterTypes(IServiceCollection service)
         {
             service.RegisterAppServices()
-                .RegisterAppBusiness();
+                .RegisterServices();
 
             AppContainer.SetContainer(service);
-            AutoMapperConfiguration.Register();
         }
     }
 }
