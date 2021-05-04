@@ -13,9 +13,9 @@ namespace LeandroExRate.Application.AppServices
     public class RateAppService
     {
         readonly IRateService _service;
-        public RateAppService()
+        public RateAppService(IRateService service)
         {
-            _service = AppContainer.Resolve<IRateService>();
+            _service = service;
         }
 
         public async Task<AppResult<List<Rate_vw>>> All()
@@ -26,7 +26,7 @@ namespace LeandroExRate.Application.AppServices
         public async Task<AppResult<List<Rate_vw>>> Sumary()
         {
             return new AppResult<List<Rate_vw>>(
-                (await _service.GetAllRateAsync()).Result
+                (await _service.GetAllRateAsync())?.Result
                 .Where(x => x.From == ECurrency.EUR
                         || (x.From == ECurrency.GBP && x.To == ECurrency.USD)
                       ).ToList());

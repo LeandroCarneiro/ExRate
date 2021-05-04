@@ -1,6 +1,7 @@
-﻿using LeandroExRate.Bootstrap;
+﻿using LeandroExRate.Application.Interfaces;
+using LeandroExRate.Bootstrap;
+using LeandroExRate.DI;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.IO;
 using System.Linq;
@@ -29,5 +30,7 @@ namespace LeandroExRate.App
                      
                      builder.Build();                     
                  });
+
+        public static IRateService IRateService => AppContainer.Resolve<IRateService>();
     }
 }

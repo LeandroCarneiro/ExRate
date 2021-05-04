@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{717ED686-EF19-4586-B977-354A3A7F7046}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.Domain", "LeandroExRate\LeandroExRate.Domain\LeandroExRate.Domain.csproj", "{17E52217-865D-4A54-B84E-2D43BF231D35}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.AppService", "LeandroExRate\LeandroExRate.Application\LeandroExRate.AppService.csproj", "{A55993E4-41F3-4BBB-9E42-9F4BA149FB02}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.Bootstrap", "LeandroExRate\LeandroExRate.Bootstrap\LeandroExRate.Bootstrap.csproj", "{DF2E7CB1-A0EE-4E46-9D8C-056BCAAA0DAF}"
@@ -27,16 +25,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{6B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.Integration.DataFixer", "LeandroExRate.Integration.DataFixer\LeandroExRate.Integration.DataFixer.csproj", "{18095E32-0EEC-40A7-AF08-BCD6B9379E5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeandroExRate.Test", "LeandroExRate.Test\LeandroExRate.Test.csproj", "{73883E70-9AA4-487D-AA8D-F7357B9E5416}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{17E52217-865D-4A54-B84E-2D43BF231D35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17E52217-865D-4A54-B84E-2D43BF231D35}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17E52217-865D-4A54-B84E-2D43BF231D35}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17E52217-865D-4A54-B84E-2D43BF231D35}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A55993E4-41F3-4BBB-9E42-9F4BA149FB02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A55993E4-41F3-4BBB-9E42-9F4BA149FB02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A55993E4-41F3-4BBB-9E42-9F4BA149FB02}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -65,6 +61,10 @@ Global
 		{18095E32-0EEC-40A7-AF08-BCD6B9379E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18095E32-0EEC-40A7-AF08-BCD6B9379E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18095E32-0EEC-40A7-AF08-BCD6B9379E5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73883E70-9AA4-487D-AA8D-F7357B9E5416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73883E70-9AA4-487D-AA8D-F7357B9E5416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73883E70-9AA4-487D-AA8D-F7357B9E5416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73883E70-9AA4-487D-AA8D-F7357B9E5416}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +77,7 @@ Global
 		{A6BA90F3-7365-48EF-B3F0-FA81FF978355} = {CB0246D8-6855-4AE9-811C-EDF47A83444B}
 		{6B6F2244-D4AA-46D1-9DC4-1B7B46842650} = {717ED686-EF19-4586-B977-354A3A7F7046}
 		{18095E32-0EEC-40A7-AF08-BCD6B9379E5E} = {6B6F2244-D4AA-46D1-9DC4-1B7B46842650}
+		{73883E70-9AA4-487D-AA8D-F7357B9E5416} = {F4FD497F-DB86-4109-810B-D55E9503CD06}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F08F07BA-B4D4-4DB9-BC35-3D5BF34682F2}

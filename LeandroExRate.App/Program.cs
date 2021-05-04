@@ -18,7 +18,7 @@ namespace LeandroExRate.App
                     var option = "";
                     do
                     {
-                        var appService = new RateAppService();
+                        var appService = new RateAppService(Startup.IRateService);
                         var result = (await appService.Sumary()).Result;
 
                         foreach (var item in result)                        
