@@ -15,28 +15,34 @@ namespace LeandroExRate.App
             {
                 using (IHost host = Startup.CreateHostBuilder(args).Build())
                 {
-                    int option = 0;
-                    Console.WriteLine("1- Return a rate for EUR to USD");
-                    Console.WriteLine("2- Return a rate for EUR to USD");
-                    Console.WriteLine("3- Return a rate for EUR to USD");
-                    Console.WriteLine("0- Return all rates");
+                    var option = "";
+                    do
+                    {
+                        var appService = new RateAppService();
+                        var result = (await appService.Sumary()).Result;
 
-                    int.TryParse(Console.ReadLine(), out option);
-                    if (option < 0 || option > 3)
-                        throw new InvalidOptionException();
+                        foreach (var item in result)                        
+                            Console.WriteLine(item.ResultString);
+                        
+                        Console.WriteLine("/n/n Type '#' to exit");
+                        option = Console.ReadLine();
+                        Console.Clear();
 
-                    var appService = new RateAppService();
-                    appService.SelectOptionAsync((EOption)option);
-
-                    Console.WriteLine("Hello World!");
+                    } while (option != "#");
                     await host.RunAsync();
                 }
             }
-            catch (InvalidOptionException ex)
+            catch (AppBaseException ex)
             {
-                Console.Beep();
+                //Console.Beep();
                 Console.Clear();
                 Console.WriteLine("Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                //Console.Beep();
+                Console.Clear();
+                Console.WriteLine("Error: System could not calculate the rates");
             }
         }        
     }

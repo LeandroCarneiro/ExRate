@@ -4,6 +4,7 @@ using LeandroExRate.Common.Exceptions;
 using LeandroExRate.Common.InternalObjects;
 using LeandroExRate.DI;
 using LeandroExRate.ViewModels.AppObjects;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace LeandroExRate.Application.AppServices
@@ -35,6 +36,11 @@ namespace LeandroExRate.Application.AppServices
                 default:
                     throw new InvalidOptionException();
             }
+        }
+
+        public async Task<AppResult<List<Rate_vw>>> Sumary()
+        {
+            return await _service.GetAllRateAsync();
         }
     }
 }

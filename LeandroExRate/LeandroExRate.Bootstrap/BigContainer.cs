@@ -1,5 +1,6 @@
 ﻿using LeandroExRate.Application.AppServices;
 using LeandroExRate.Application.Interfaces;
+using LeandroExRate.Integration.DataFixer;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace LeandroExRate.Bootstrap
@@ -14,7 +15,7 @@ namespace LeandroExRate.Bootstrap
 
         public static IServiceCollection RegisterServices(this IServiceCollection service)
         {
-            //service.AddTransient<IRateService, RateBusiness>();
+            service.AddTransient<IRateService, DataFixerClient>();
             return service;
         }
     }

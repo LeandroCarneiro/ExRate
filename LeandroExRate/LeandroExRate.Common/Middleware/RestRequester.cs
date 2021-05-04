@@ -10,11 +10,11 @@ namespace LeandroExRate.Common.Middleware
 {
     public class RestRequester
     {
-        readonly string _url;
-
-        public RestRequester(string url)
+        readonly string _uri;
+        
+        public RestRequester(string url, string accessKey)
         {
-            _url = url;
+            _uri = @$"{url}?access_key={accessKey}";
         }
 
         public async Task<T> SendAsync<T>(ERestCall method, T payload = null) where T : class
@@ -22,7 +22,7 @@ namespace LeandroExRate.Common.Middleware
             T result = null;
             using (var httpClient = new HttpClient())
             {
-                var request = new HttpRequestMessage(Fatory(method), new Uri(_url));
+                var request = new HttpRequestMessage(Fatory(method), new Uri(_uri));
                 var stringPayload = JsonConvert.SerializeObject(payload);
                 request.Content = new StringContent(stringPayload, Encoding.UTF8, "application/json");
 

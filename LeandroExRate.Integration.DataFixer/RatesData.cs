@@ -7,7 +7,6 @@ namespace LeandroExRate.Integration.DataFixer
     public class RatesData
     {
         public bool Success { get; set; }
-        public DateTime Timestamp { get; set; }
         public DateTime Date { get; set; }
         public string Base { get; set; }
         public Dictionary<string, decimal> Rates { get; set; }

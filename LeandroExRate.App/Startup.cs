@@ -1,5 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using LeandroExRate.Bootstrap;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.IO;
+using System.Linq;
 
 namespace LeandroExRate.App
 {
@@ -7,23 +11,23 @@ namespace LeandroExRate.App
     {
         public static IHostBuilder CreateHostBuilder(string[] args) =>
              Host.CreateDefaultBuilder(args)
+                     //Dependency Injection :)
+                 .ConfigureServices((_, services) => DIBootstrap.RegisterTypes(services))
                  .ConfigureAppConfiguration((hostingContext, configuration) =>
                  {
-                     configuration.Sources.Clear();
 
-                     IHostEnvironment env = hostingContext.HostingEnvironment;
+                     var current = Directory.GetCurrentDirectory();
+                     var directories = Directory.GetParent(current)
+                         .Parent.Parent.Parent.GetDirectories();
+                     var config = directories.Where(x => x.FullName.Contains("LeandroExRate.App"))?.First()?.FullName;
 
-                     configuration
-                         .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
-                     IConfigurationRoot configurationRoot = configuration.Build();
-
-                    //TransientFaultHandlingOptions options = new();
-                    //configurationRoot.GetSection(nameof(TransientFaultHandlingOptions))
-                    //                 .Bind(options);
-
-                    //Console.WriteLine($"TransientFaultHandlingOptions.Enabled={options.Enabled}");
-                    //Console.WriteLine($"TransientFaultHandlingOptions.AutoRetryDelay={options.AutoRetryDelay}");
-                });
+                     //Configuration :)
+                     var builder = configuration
+                        .SetBasePath(config)
+                        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+                     
+                     builder.Build();                     
+                 });
     }
 }

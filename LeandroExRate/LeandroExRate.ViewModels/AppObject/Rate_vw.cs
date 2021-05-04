@@ -11,6 +11,6 @@ namespace LeandroExRate.ViewModels.AppObjects
         public decimal ExchangeRate { get; set; }
         public DateTime Date { get; set; }
 
-        public string ResultString => $"From {From.ToString()} to {To.ToString()}: {ExchangeRate} at {Date}";
+        public string ResultString => $"From {From.ToString()} to {To.ToString()}: {ExchangeRate}";
     }
 }
