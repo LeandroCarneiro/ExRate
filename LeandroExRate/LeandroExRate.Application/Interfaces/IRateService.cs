@@ -1,11 +1,12 @@
 ﻿using LeandroExRate.Common;
 using LeandroExRate.Common.InternalObjects;
 using LeandroExRate.ViewModels.AppObjects;
+using System.Threading.Tasks;
 
 namespace LeandroExRate.Application.Interfaces
 {
     public interface IRateService
     {
-        AppResult<Rate_vw> GetRate(ECurrency uSD, ECurrency eUR);
+        Task<AppResult<Rate_vw>> GetRateAsync(ECurrency from, ECurrency to);
     }
 }

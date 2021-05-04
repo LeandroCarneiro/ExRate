@@ -8,23 +8,21 @@ using System.Threading.Tasks;
 
 namespace LeandroExRate.Common.Middleware
 {
-    public class HttpRequester<T> where T : class
+    public class RestRequester
     {
-        readonly HttpMethod _httpMethod;
         readonly string _url;
 
-        public HttpRequester(ERestCall method, string url)
+        public RestRequester(string url)
         {
             _url = url;
-            _httpMethod = Fatory(method);
         }
 
-        public async Task<T> SendAsync(T payload = null)
+        public async Task<T> SendAsync<T>(ERestCall method, T payload = null) where T : class
         {
             T result = null;
             using (var httpClient = new HttpClient())
             {
-                var request = new HttpRequestMessage(_httpMethod, new Uri(_url));
+                var request = new HttpRequestMessage(Fatory(method), new Uri(_url));
                 var stringPayload = JsonConvert.SerializeObject(payload);
                 request.Content = new StringContent(stringPayload, Encoding.UTF8, "application/json");
 

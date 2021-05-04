@@ -26,7 +26,7 @@ namespace LeandroExRate.App
                         throw new InvalidOptionException();
 
                     var appService = new RateAppService();
-                    appService.SelectOption((EOption)option);
+                    appService.SelectOptionAsync((EOption)option);
 
                     Console.WriteLine("Hello World!");
                     await host.RunAsync();

@@ -4,6 +4,7 @@ using LeandroExRate.Common.Exceptions;
 using LeandroExRate.Common.InternalObjects;
 using LeandroExRate.DI;
 using LeandroExRate.ViewModels.AppObjects;
+using System.Threading.Tasks;
 
 namespace LeandroExRate.Application.AppServices
 {
@@ -15,22 +16,22 @@ namespace LeandroExRate.Application.AppServices
             _service = AppContainer.Resolve<IRateService>();
         }
 
-        public AppResult<Rate_vw> SelectOption(EOption option)
+        public async Task<AppResult<Rate_vw>> SelectOptionAsync(EOption option)
         {
             switch (option)
             {
                 case EOption.USD_EUR:
-                    return _service.GetRate(ECurrency.USD, ECurrency.EUR);
+                    return await _service.GetRateAsync(ECurrency.USD, ECurrency.EUR);
                 case EOption.USD_GBP:
-                    return _service.GetRate(ECurrency.USD, ECurrency.GBP);
+                    return await _service.GetRateAsync(ECurrency.USD, ECurrency.GBP);
                 case EOption.EUR_USD:
-                    return _service.GetRate(ECurrency.EUR, ECurrency.USD);
+                    return await _service.GetRateAsync(ECurrency.EUR, ECurrency.USD);
                 case EOption.EUR_GBP:
-                    return _service.GetRate(ECurrency.EUR, ECurrency.GBP);
+                    return await _service.GetRateAsync(ECurrency.EUR, ECurrency.GBP);
                 case EOption.GPB_USD:
-                    return _service.GetRate(ECurrency.GBP, ECurrency.USD);
+                    return await _service.GetRateAsync(ECurrency.GBP, ECurrency.USD);
                 case EOption.GPB_EUR:
-                    return _service.GetRate(ECurrency.GBP, ECurrency.EUR);
+                    return await _service.GetRateAsync(ECurrency.GBP, ECurrency.EUR);
                 default:
                     throw new InvalidOptionException();
             }
