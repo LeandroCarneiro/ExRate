@@ -13,24 +13,23 @@ namespace LeandroExRate.App
         {
             try
             {
-                using (IHost host = Startup.CreateHostBuilder(args).Build())
+                Startup.CreateHostBuilder(args).Build();
+                
+                var option = "";
+                do
                 {
-                    var option = "";
-                    do
-                    {
-                        var appService = new RateAppService(Startup.IRateService);
-                        var result = (await appService.Sumary()).Result;
+                    var appService = new RateAppService(Startup.IRateService);
+                    var result = (await appService.Sumary()).Result;
 
-                        foreach (var item in result)                        
-                            Console.WriteLine(item.ResultString);
+                    foreach (var item in result)                        
+                        Console.WriteLine(item.ResultString);
                         
-                        Console.WriteLine("Type '#' to exit");
-                        option = Console.ReadLine();
-                        Console.Clear();
+                    Console.WriteLine("Type '#' to exit");
+                    option = Console.ReadLine();
+                    Console.Clear();
 
-                    } while (option != "#");
-                    await host.RunAsync();
-                }
+                } while (option != "#");
+                
             }
             catch (AppBaseException ex)
             {
