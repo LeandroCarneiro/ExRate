@@ -42,6 +42,9 @@ namespace LeandroExRate.Integration.DataFixer
             {
                 foreach (var itemTo in EnumHelper.GetEnumValues<ECurrency>())
                 {
+                    if (itemFrom == itemTo)
+                        continue;
+
                     lst.Add(new Rate_vw()
                     {
                         Date = result.Date,
