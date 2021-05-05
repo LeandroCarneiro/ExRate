@@ -31,6 +31,6 @@ namespace LeandroExRate.App
                      builder.Build();                     
                  });
 
-        public static IRateService IRateService => AppContainer.Resolve<IRateService>();
+        public static IRateService IRateService => DIHelper.Resolve<IRateService>();
     }
 }

@@ -3,7 +3,7 @@ using System;
 
 namespace LeandroExRate.DI
 {
-    public static class AppContainer
+    public static class DIHelper
     {
         private static IServiceCollection _container;
 
