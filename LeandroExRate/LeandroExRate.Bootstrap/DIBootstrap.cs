@@ -10,7 +10,7 @@ namespace LeandroExRate.Bootstrap
             service.RegisterAppServices()
                 .RegisterServices();
 
-            AppContainer.SetContainer(service);
+            DIHelper.SetContainer(service);
         }
     }
 }
